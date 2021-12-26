@@ -1,3 +1,4 @@
+import { useRef } from 'react';
 import { useForm } from 'react-hook-form';
 import {
     Modal,
@@ -17,6 +18,7 @@ import {
 import { createSite } from '@/lib/db';
 
 const AddSiteModal = () => {
+    const initialRef = useRef();
     const { isOpen, onOpen, onClose } = useDisclosure();
     const { handleSubmit, register } = useForm();
 
